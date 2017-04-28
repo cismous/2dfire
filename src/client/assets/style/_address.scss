@@ -1,0 +1,69 @@
+.shop-address {
+  margin: 0 $padding;
+  border-radius: .2rem;
+  font-size: .36rem;
+  background: rgba(255, 255, 255, .75);
+  color: #5b5b5b;
+
+  a {
+    color: #5b5b5b;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    border-bottom: dotted #e2dfe2 1px;
+    padding: .2rem 0;
+    margin: 0 .71em;
+
+    > .icon {
+      $size: 1.29em;
+      width: $size;
+      height: $size;
+      margin-right: .33em;
+
+      &.icon-address {
+        background: url("../images/icon/address.png") 50% 50% no-repeat;
+        background-size: contain;
+      }
+
+      &.icon-phone {
+        background: url("../images/icon/phone.png") 50% 50% no-repeat;
+        background-size: contain;
+      }
+
+      &.icon-consume {
+        background: url("../images/icon/consume.png") 50% 50% no-repeat;
+        background-size: contain;
+      }
+
+      &.icon-time {
+        background: url("../images/icon/time.png") 50% 50% no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &.item-address {
+      .content {
+        flex: 1;
+      }
+    }
+
+    &.item-phone {
+      .content {
+        flex: 1;
+      }
+
+      .action-call {
+        display: flex;
+        align-items: center;
+        color: #e02503;
+
+        .icon-arrow-right {
+          margin-left: .5em;
+          @include icon(1em, "../images/icon/arrow-right.png")
+        }
+      }
+    }
+  }
+}

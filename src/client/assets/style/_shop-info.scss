@@ -1,0 +1,59 @@
+.shop-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo {
+    $size: 6em;
+    width: $size;
+    height: $size;
+    margin-top: 4.5em;
+    background: url("../images/logo.png") 50% 50% no-repeat;
+    background-size: contain;
+  }
+
+  .title {
+    width: 100%;
+    color: #303d23;
+    font-weight: 700;
+  }
+
+  .info {
+    width: 100%;
+    color: #424242;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .name {
+      margin-right: .5em;
+    }
+
+    > .rank-wrap {
+      $size: 1.67em;
+      background: #961e00;
+      height: $size;
+      border-radius: .8em;
+      display: flex;
+      align-items: center;
+
+      .rank {
+        $size: 1.5em;
+        width: $size;
+        height: $size;
+        margin-left: 0.17em;
+        border-radius: 50%;
+        background: #e02200;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+      }
+
+      .text {
+        color: #fff;
+        padding: 0 .8em 0 .4em;
+      }
+    }
+  }
+}

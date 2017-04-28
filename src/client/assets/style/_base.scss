@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../images/bg.png") repeat-y fixed;
+  background-size: 100% auto;
+
+  .container {
+  }
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+}

@@ -1,0 +1,146 @@
+.comment {
+  padding: 1em;
+  border-radius: .2rem;
+  background: rgba(255, 255, 255, .75);
+  color: #333;
+
+  > .hd {
+    display: flex;
+    align-items: center;
+
+    .icon-comment {
+      $size: 1.29em;
+      width: $size;
+      height: $size;
+      background: url("../images/icon/comment.png") 50% 50% no-repeat;
+      background-size: contain;
+    }
+
+    .text-1 {
+      margin-left: .6em;
+      flex: 1;
+    }
+
+    .text-2 {
+      display: flex;
+      align-items: center;
+
+      .icon-arrow-right {
+        margin-left: .3em;
+        @include icon(1em, "../images/icon/arrow-right.png")
+      }
+    }
+  }
+
+  > .rank {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0;
+
+    > li {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .star {
+        $size: 1.3em;
+        display: flex;
+        align-items: center;
+        margin: .2em 0;
+
+        .icon {
+          margin-left: .15em;
+          width: $size;
+          height: $size;
+
+          &.icon-star {
+            background: url("../images/icon/star.png") 50% 50% no-repeat;
+            background-size: contain;
+          }
+
+          &.icon-star-empty {
+            background: url("../images/icon/star-empty.png") 50% 50% no-repeat;
+            background-size: contain;
+          }
+        }
+
+        &:first-of-type {
+          .icon {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  > .list {
+    > .item {
+      margin-top: 2em;
+
+      .hd {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: #797979;
+        padding-bottom: .4em;
+
+        .avatar {
+          position: relative;
+          background: #000;
+          border-radius: 50%;
+          @include icon(4.125em, '../images/avatar.jpg');
+          background-size: cover;
+
+          .v5 {
+            $size: 1.5em;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            color: #fff;
+            position: absolute;
+            bottom: -.25em;
+            right: -.25em;
+            text-align: center;
+            background: #d706c6;
+          }
+        }
+
+        .name {
+          flex: 1;
+          margin-left: .58em;
+        }
+
+        .commend {
+          display: flex;
+          align-items: center;
+          padding-right: .2em;
+
+          .icon {
+            @include icon(1.2em, '../images/icon/commend.png');
+            margin-right: .4em;
+          }
+        }
+      }
+
+      .text,
+      .info {
+        line-height: 1.8em;
+      }
+
+      .text {
+        display: flex;
+        color: #424242;
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+
+        .time {
+          color: #8b8b8b;
+        }
+      }
+    }
+  }
+}

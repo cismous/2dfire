@@ -1,0 +1,14 @@
+@mixin iconBox($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin iconBg($url) {
+  background: url("#{$url}") 50% 50% no-repeat;
+  background-size: contain;
+}
+
+@mixin icon($size, $url) {
+  @include iconBox($size);
+  @include iconBg($url);
+}

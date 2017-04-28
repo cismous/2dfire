@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="applicable-device" content="mobile">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>二维火面试题</title>
+  <script>
+    var dpr, rem, scale,
+      docEl = document.documentElement, fontEl = document.createElement('style'),
+      metaViewportEl = document.querySelector('meta[name="viewport"]');
+    docEl.firstElementChild.appendChild(fontEl);
+    dpr = window.devicePixelRatio || 1;
+    docEl.setAttribute('data-dpr', dpr);
+    scale = parseFloat((1 / dpr).toFixed(3));
+    var width = docEl.clientWidth;
+    rem = width * dpr / 10;
+    metaViewportEl.setAttribute('content', 'width=' + dpr * width + ', initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    fontEl.innerHTML = 'html{font-size: ' + rem + 'px!important;}';
+  </script>
+</head>
+<body id="root">
+<div class="container">
+  <section class="shop-info m-rl-10 m-b-16">
+    <div class="logo fts-10"></div>
+    <h2 class="title fts-18 m-t-12">干锅居文三路分店</h2>
+    <div class="info fts-16 m-t-10">
+      <div class="name">欢迎光临，孙大圣</div>
+      <div class="rank-wrap fts-12"><span class="rank">v6</span><span class="text fts-12">食仙</span></div>
+    </div>
+  </section>
+
+  <section id="banner-vip" class="banner-vip m-rl-10 fts-10">
+    <div class="list-wrap m-b-20">
+      <ul class="list">
+        <li class="item">
+          <div class="shop-name fts-16">干锅居文三路分店</div>
+          <div class="title fts-40">贵宾卡</div>
+          <ul class="money fts-16">
+            <li class="item-discount">
+              <span class="line-0">折扣</span>
+              <span class="line-1">8.5折</span>
+            </li>
+            <li class="item-balance">
+              <span class="line-0">余额</span>
+              <span class="line-1">&yen;0</span>
+            </li>
+            <li class="item-credits">
+              <span class="line-0">积分</span>
+              <span class="line-1">0</span>
+            </li>
+          </ul>
+        </li>
+
+        <li class="item">
+          <div class="shop-name fts-16">干锅居文三路分店</div>
+          <div class="title fts-40">贵宾卡</div>
+          <ul class="money fts-16">
+            <li class="item-discount">
+              <span class="line-0">折扣</span>
+              <span class="line-1">8.5折</span>
+            </li>
+            <li class="item-balance">
+              <span class="line-0">余额</span>
+              <span class="line-1">&yen;0</span>
+            </li>
+            <li class="item-credits">
+              <span class="line-0">积分</span>
+              <span class="line-1">0</span>
+            </li>
+          </ul>
+        </li>
+
+        <li class="item">
+          <div class="shop-name fts-16">干锅居文三路分店</div>
+          <div class="title fts-40">贵宾卡</div>
+          <ul class="money fts-16">
+            <li class="item-discount">
+              <span class="line-0">折扣</span>
+              <span class="line-1">8.5折</span>
+            </li>
+            <li class="item-balance">
+              <span class="line-0">余额</span>
+              <span class="line-1">&yen;0</span>
+            </li>
+            <li class="item-credits">
+              <span class="line-0">积分</span>
+              <span class="line-1">0</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="nav fts-12">
+      <li class="item active"></li>
+      <li class="item"></li>
+      <li class="item"></li>
+    </ul>
+  </section>
+
+  <section class="shop-address m-rl-10 fts-14">
+    <div class="item item-address">
+      <i class="icon icon-address"></i>
+      <div class="label">地址：</div>
+      <div class="content text-overflow">杭州市拱墅区教工路552号二维火科技大厦2楼</div>
+    </div>
+
+    <div class="item item-phone">
+      <i class="icon icon-phone"></i>
+      <div class="label">电话：</div>
+      <a class="content" href="tel:0571-85717777">0571-85717777</a>
+      <a class="action-call fts-12" href="tel:0571-85717777">拨打<i class="icon icon-arrow-right"></i></a>
+    </div>
+
+    <div class="item">
+      <i class="icon icon-consume"></i>
+      <div class="label">人均：</div>
+      <div class="content">&yen;50</div>
+    </div>
+
+    <div class="item">
+      <i class="icon icon-time"></i>
+      <div class="label">营业：</div>
+      <div class="content">10:30~21:30</div>
+    </div>
+  </section>
+
+  <section class="comment fts-10 m-10">
+    <div class="hd fts-14">
+      <i class="icon icon-comment"></i>
+      <div class="text-1">顾客评价</div>
+      <div class="text-2 fts-10"><span>共10002评价，好评率89%</span><i class="fts-12 icon icon-arrow-right"></i></div>
+    </div>
+
+    <ul class="rank fts-14">
+      <li class="item">
+        <div class="text">菜肴口味</div>
+        <div class="star fts-10">
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star-empty"></i>
+          <i class="icon icon-star-empty"></i>
+        </div>
+        <div class="score">3分</div>
+      </li>
+
+      <li class="item">
+        <div class="text">上菜速度</div>
+        <div class="star fts-10">
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+        </div>
+        <div class="score">5分</div>
+      </li>
+
+      <li class="item">
+        <div class="text">就餐环境</div>
+        <div class="star fts-10">
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+          <i class="icon icon-star"></i>
+        </div>
+        <div class="score">5分</div>
+      </li>
+    </ul>
+
+    <ul class="list fts-10">
+      <li class="item">
+        <div class="hd">
+          <div class="avatar fts-8"><span class="v5">V5</span></div>
+          <div class="name fts-12">科比</div>
+          <div class="commend"><i class="icon icon-commend"></i><span>好评</span></div>
+        </div>
+
+        <div class="text">奔着烤鸭去的，半小时就出炉了，烤鸭挺香的，吃了满嘴流油，饼趁热吃还行，两个人要半只就够了。奔着烤鸭去的，半小时就出炉了，烤鸭挺香的，吃了满嘴流油，饼趁热吃还行，两个人要半只就够了。</div>
+
+        <div class="info">
+          <div class="time">2016-06-08 12:00</div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="hd">
+          <div class="avatar fts-8"><span class="v5">V5</span></div>
+          <div class="name fts-12">乔丹</div>
+          <div class="commend"><i class="icon icon-commend"></i><span>好评</span></div>
+        </div>
+
+        <div class="text">奔着烤鸭去的，半小时就出炉了，烤鸭挺香的</div>
+
+        <div class="info">
+          <div class="time">2016-06-08 12:00</div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="hd">
+          <div class="avatar fts-8"><span class="v5">V5</span></div>
+          <div class="name fts-12">乔丹</div>
+          <div class="commend"><i class="icon icon-commend"></i><span>好评</span></div>
+        </div>
+
+        <div class="text">奔着烤鸭去的</div>
+
+        <div class="info">
+          <div class="time">2016-06-08 12:00</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="footer fts-10">
+    <div class="item item-consume"><i class="icon icon-consume"></i><span>叫外卖</span></div>
+    <div class="item item-scan"><i class="icon icon-scan"></i></div>
+    <div class="item item-users"><i class="icon icon-users"></i><span>排队</span></div>
+    <div class="item item-shop-cart"><i class="icon icon-shop-cart"></i><span>到店点菜</span></div>
+  </section>
+
+  <section class="footer hidden fts-10"></section>
+</div>
+</body>
+</html>

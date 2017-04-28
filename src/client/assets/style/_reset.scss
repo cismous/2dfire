@@ -1,0 +1,168 @@
+@mixin px2px($classList, $propertyList, $px) {
+  @if (type-of($classList) == string) {
+    $classList: ($classList)
+  }
+  @if (type-of($propertyList) == string) {
+    $propertyList: ($propertyList)
+  }
+
+  @each $class in $classList {
+    #{$class} {
+      @each $property in $propertyList {
+        #{$property}: round($px / 2) * 1px;
+      }
+    }
+
+    [data-dpr="1.5"] #{$class} {
+      @each $property in $propertyList {
+        #{$property}: round($px * 1.5 / 2) * 1px;
+      }
+    }
+
+    [data-dpr="2"] #{$class} {
+      @each $property in $propertyList {
+        #{$property}: $px * 1px;
+      }
+    }
+
+    // for mx3
+    [data-dpr="2.5"] #{$class} {
+      @each $property in $propertyList {
+        #{$property}: round($px * 2.5 / 2) * 1px;
+      }
+    }
+
+    // for xiaomi note
+    [data-dpr="2.75"] #{$class} {
+      @each $property in $propertyList {
+        #{$property}: round($px * 2.75 / 2) * 1px;
+      }
+    }
+
+    [data-dpr="3"] #{$class} {
+      @each $property in $propertyList {
+        #{$property}: round($px / 2 * 3) * 1px
+      }
+    }
+
+    // for sm note4
+    [data-dpr="4"] #{$class} {
+      @each $property in $propertyList {
+        #{$property}: $px * 2px;
+      }
+    }
+  }
+}
+
+@include px2px(('body' 'input' 'textarea' 'button' 'a'), 'font-size', 28);
+@include px2px('.fts-128', 'font-size', 256);
+@include px2px('.fts-64', 'font-size', 128);
+@include px2px('.fts-40', 'font-size', 80);
+@include px2px('.fts-32', 'font-size', 64);
+@include px2px('.fts-30', 'font-size', 60);
+@include px2px('.fts-28', 'font-size', 56);
+@include px2px('.fts-26', 'font-size', 52);
+@include px2px('.fts-24', 'font-size', 48);
+@include px2px('.fts-22', 'font-size', 46);
+@include px2px('.fts-21', 'font-size', 42);
+@include px2px('.fts-20', 'font-size', 40);
+@include px2px('.fts-19', 'font-size', 38);
+@include px2px('.fts-18', 'font-size', 36);
+@include px2px('.fts-17', 'font-size', 34);
+@include px2px('.fts-16', 'font-size', 32);
+@include px2px('.fts-15', 'font-size', 30);
+@include px2px('.fts-14', 'font-size', 28);
+@include px2px('.fts-13', 'font-size', 26);
+@include px2px('.fts-12', 'font-size', 24);
+@include px2px('.fts-10', 'font-size', 20);
+@include px2px('.fts-8', 'font-size', 16);
+
+@include px2px('.p-4', 'padding', 8);
+@include px2px('.p-8', 'padding', 16);
+@include px2px('.p-rl-8', ('padding-right', 'padding-left'), 16);
+@include px2px('.p-10', 'padding', 20);
+@include px2px('.p-t-10', 'padding-top', 20);
+@include px2px('.p-b-10', 'padding-bottom', 20);
+@include px2px('.p-rl-10', ('padding-right', 'padding-left'), 20);
+@include px2px('.p-12', 'padding', 24);
+@include px2px('.p-t-14', 'padding-top', 28);
+@include px2px('.p-b-14', 'padding-bottom', 28);
+@include px2px('.p-rl-14', ('padding-right', 'padding-left'), 28);
+@include px2px('.p-14', 'padding', 28);
+@include px2px('.m-t-10', 'margin-top', 20);
+@include px2px('.m-b-10', 'margin-bottom', 20);
+@include px2px('.m-t-12', 'margin-top', 24);
+@include px2px('.m-b-12', 'margin-bottom', 24);
+@include px2px('.m-t-14', 'margin-top', 28);
+@include px2px('.m-b-14', 'margin-bottom', 28);
+@include px2px('.m-b-16', 'margin-bottom', 32);
+@include px2px('.m-rl-10', ('margin-right', 'margin-left'), 20);
+@include px2px('.m-rl-14', ('margin-right', 'margin-left'), 28);
+@include px2px('.m-10', 'margin', 20);
+@include px2px('.m-14', 'margin', 28);
+
+@include px2px(('.h-46', '.hd-h'), 'height', 92);
+@include px2px(('.lh-46', '.lhd-h'), 'line-height', 92);
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+
+  a {
+    color: #000;
+  }
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea,
+input[type=number],
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+}

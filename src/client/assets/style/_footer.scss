@@ -1,0 +1,78 @@
+.footer {
+  $size: 5em;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  bottom: 1em;
+  height: $size;
+  padding-left: 1.6em;
+  padding-right: 1.6em;
+
+  .item {
+    width: $size;
+    height: $size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1);
+
+    &.item-scan {
+      background: #df3315;
+      margin-left: auto;
+
+      .icon.icon-scan {
+        width: 60%;
+        height: 60%;
+      }
+    }
+
+    &.item-users {
+      margin-left: 2.25em;
+    }
+
+    &.item-shop-cart {
+      margin-left: 2.25em;
+    }
+  }
+
+  .icon {
+    width: 40%;
+    height: 40%;
+    display: inline-block;
+
+    &.icon-consume {
+      $size: 49%;
+      background: url("../images/icon/consume.png") $size $size no-repeat;
+      background-size: contain;
+    }
+
+    &.icon-scan {
+      $size: 54%;
+      background: url("../images/icon/scan.png") $size $size no-repeat;
+      background-size: contain;
+    }
+
+    &.icon-users {
+      $size: 42%;
+      background: url("../images/icon/users.png") $size $size no-repeat;
+      background-size: contain;
+    }
+
+    &.icon-shop-cart {
+      $size: 38%;
+      background: url("../images/icon/shop-cart.png") $size $size no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &.hidden {
+    position: static;
+    visibility: hidden;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+}
