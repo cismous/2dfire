@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "dev": "webpack-dashboard -- nodemon app.js",
-    "dev1": "webpack-dashboard -- node app.js",
+    "dev": "webpack-dashboard -- node app.js",
     "build": "NODE_ENV=production webpack --progress --colors",
     "hot-dev-server": "webpack-dev-server --progress --colors"
   },
