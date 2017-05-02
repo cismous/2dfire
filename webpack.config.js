@@ -72,7 +72,7 @@ if (isProduction) {
   rules.push({
     test: /\.scss$/,
     loader: extractSass.extract({
-      use: 'css-loader?importLoaders=1!postcss-loader!sass-loader',
+      use: 'css-loader?importLoaders=1&minimize=true!postcss-loader!sass-loader',
       fallback: 'style-loader',
     }),
   })
