@@ -17,7 +17,8 @@
     transition: transform 300ms;
 
     > .item {
-      background: url("../images/vip/banner-1.png") no-repeat;
+      background: url("../images/vip/banner-1.png") no-repeat 50% 50%;
+      background-size: cover;
       position: relative;
       border-radius: .8em;
       overflow: hidden;
