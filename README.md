@@ -1,3 +1,7 @@
+## 环境
+1. node v7.9
+2. yarn
+
 ## 安装
 1. `git clone git@github.com:cismous/2dfire.git`
 2. `yarn`
