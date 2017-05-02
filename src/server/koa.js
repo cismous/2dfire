@@ -8,6 +8,6 @@ module.exports = function (app, config) {
     })
     app.use(proxy)
   } else {
-    app.use(serve(config.root + '/dist'))
+    app.use(serve(config.root + '/dist', {maxage: 365 * 24 * 3600 * 1000}))
   }
 }
